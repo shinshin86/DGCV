@@ -4,6 +4,8 @@ Daily Git Collection Vehicle
 ------------
 ##### This program collect a target git daily.
 
+** This program is developing yet.**
+
 ------------
 
 ## REQUIREMENTS
