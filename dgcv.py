@@ -66,18 +66,24 @@ def checkout_and_copy(uniq_commit_data, repo, git, your_repository, cp_dest_path
         repo.delete_head(str(i),'-D')
         print("Success create dir : " + str(i))
 
-your_repository = os.getcwd() + "" # Your Repository(absolute path) is here. -> Example : os.getcwd() + "/test/your_repository"
-cp_dest_path = os.getcwd() + "" # Copy destination path(absolute path) is here. -> Example : os.getcwd() + "/test/copy_dest_path"
-repository_name = "repositry name is here" # TODO -> This is a Tentative correspondence.
+def main():
 
-repo = Repo(your_repository)
-uniq_commit_days = {}
-uniq_commit_data = find_last_commit_time(repo.iter_commits('master', max_count=100))
-git = repo.git
+    your_repository = os.getcwd() + "" # Your Repository(absolute path) is here. -> Example : os.getcwd() + "/test/your_repository"
+    cp_dest_path = os.getcwd() + "" # Copy destination path(absolute path) is here. -> Example : os.getcwd() + "/test/copy_dest_path"
+    repository_name = "repositry name is here" # TODO -> This is a Tentative correspondence.
+
+    repo = Repo(your_repository)
+    uniq_commit_days = {}
+    uniq_commit_data = find_last_commit_time(repo.iter_commits('master', max_count=100))
+    git = repo.git
 
 
-print("Daily Git Collection Vehicle start...")
+    print("Daily Git Collection Vehicle start...")
 
-checkout_and_copy(uniq_commit_data, repo, git, your_repository, cp_dest_path, repository_name)
+    checkout_and_copy(uniq_commit_data, repo, git, your_repository, cp_dest_path, repository_name)
 
-print("Daily Git Collection Vehicle end!!")
+    print("Daily Git Collection Vehicle end!!")
+
+
+if __name__ == '__main__':
+    main()
