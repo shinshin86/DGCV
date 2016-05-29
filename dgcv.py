@@ -32,12 +32,13 @@ def find_last_commit_time(items):
 
 """Checkout and Copy
     
-    Args:
+Args:
     uniq_commit_data
     repo
     git
     your_repository
     cp_dest_path
+    repository_name
     
     """
 def checkout_and_copy(uniq_commit_data, repo, git, your_repository, cp_dest_path, repository_name):
@@ -67,9 +68,9 @@ def checkout_and_copy(uniq_commit_data, repo, git, your_repository, cp_dest_path
         print("Success create dir : " + str(i))
 
 def main():
-
-    your_repository = os.getcwd() + "" # Your Repository(absolute path) is here. -> Example : os.getcwd() + "/test/your_repository"
-    cp_dest_path = os.getcwd() + "" # Copy destination path(absolute path) is here. -> Example : os.getcwd() + "/test/copy_dest_path"
+    # When using a Absolute path, delete to "os.getcwd()"
+    your_repository = os.getcwd() + "/" + "Your Repository(Relative path) is here." # Example : "./test/your_repository"
+    cp_dest_path = os.getcwd() + "/" + "Copy destination path(Relative path) is here." # Example : "./test/copy_dest_path"
     repository_name = "repositry name is here" # TODO -> This is a Tentative correspondence.
 
     repo = Repo(your_repository)
