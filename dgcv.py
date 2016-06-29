@@ -69,9 +69,9 @@ def checkout_and_copy(uniq_commit_data, repo, git, your_repository, cp_dest_path
 
 def main():
     # When using a Absolute path, delete to "os.getcwd()"
-    your_repository = os.getcwd() + "/" + "Your Repository(Relative path) is here." # Example : "./test/your_repository"
-    cp_dest_path = os.getcwd() + "/" + "Copy destination path(Relative path) is here." # Example : "./test/copy_dest_path"
-    repository_name = "repositry name is here" # TODO -> This is a Tentative correspondence.
+    your_repository = os.getcwd() + "/" + "Your Repository(Relative path) is here." # Example : "./test_dir/your_repository"
+    cp_dest_path = os.getcwd() + "/" + "Copy destination path(Relative path) is here." # Example : "./test_dir/copy_dest_path"
+    repository_name = "repositry name is here" # Example : your_repository  => TODO -> This is a Tentative correspondence.
 
     repo = Repo(your_repository)
     uniq_commit_days = {}
